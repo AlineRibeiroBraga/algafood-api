@@ -8,7 +8,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class AtivacaoClientService {
 
+    @Autowired
     private Notificador notificador;
+    private @Autowired Notificador notificador;
 
 //    @Autowired
 //    public AtivacaoClientService(Notificador notificador) {
@@ -24,8 +26,8 @@ public class AtivacaoClientService {
         notificador.notificar(cliente, "Seu cadastro no sistema está ativo!");
     }
 
-    @Autowired
-    public void setNotificador(Notificador notificador) {
-        this.notificador = notificador;
-    }
+//    @Autowired
+//    public void setNotificador(Notificador notificador) {
+//        this.notificador = notificador;
+//    }
 }
