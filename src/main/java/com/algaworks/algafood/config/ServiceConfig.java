@@ -1,4 +1,4 @@
-package com.algaworks.algafood;
+package com.algaworks.algafood.config;
 
 import com.algaworks.algafood.notificacao.Notificador;
 import com.algaworks.algafood.service.AtivacaoClientService;
@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ServiceConfig {
 
-    @Bean
-    public AtivacaoClientService ativacaoClientService(Notificador notificador){
-        return new AtivacaoClientService(notificador);
-    }
+//    @Bean
+//    public AtivacaoClientService ativacaoClientService(Notificador notificador){
+//        return new AtivacaoClientService(notificador);
+//    }
 }

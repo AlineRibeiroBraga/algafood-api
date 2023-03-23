@@ -1,4 +1,4 @@
-package com.algaworks.algafood;
+package com.algaworks.algafood.controller;
 
 import com.algaworks.algafood.modelo.Cliente;
 import com.algaworks.algafood.service.AtivacaoClientService;
