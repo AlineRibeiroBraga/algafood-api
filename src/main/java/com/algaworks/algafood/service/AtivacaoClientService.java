@@ -7,12 +7,25 @@ import com.algaworks.algafood.notificacao.TipoDoNotificador;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @Component
 public class AtivacaoClientService {
 
     @TipoDoNotificador(value = NivelUrgencia.NORMAL)
     @Autowired
     private Notificador notificador;
+
+    @PostConstruct
+    public void init(){
+        System.out.println("INIT" + notificador);
+    }
+
+    @PreDestroy
+    public void destroy(){
+        System.out.println("DESTROY");
+    }
 
     public void ativar(Cliente cliente){
         cliente.ativar();
