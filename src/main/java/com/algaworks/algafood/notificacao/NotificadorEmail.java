@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-@Profile("prod")
+//@Profile("prod")
 @TipoDoNotificador(value = NivelUrgencia.NORMAL)
 @Component
 public class NotificadorEmail implements Notificador {
