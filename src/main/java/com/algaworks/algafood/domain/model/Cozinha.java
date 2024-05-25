@@ -5,20 +5,18 @@ package com.algaworks.algafood.domain.model;
 //import jakarta.persistence.Id;
 //import jakarta.persistence.Column;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.Column;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "tab_cozinhas")
+@Table//(name = "tab_cozinhas")
 public class Cozinha {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "nom_cozinha", length = 30) //padrão é AVARCHAR 255
+    //@Column(name = "nom_cozinha", length = 30)
     private String name;
 
     public Long getId() {
